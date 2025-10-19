@@ -1,7 +1,6 @@
 // ====================================================================
 // الكود النهائي لـ Telegram Bot - Webhook على Vercel
-// (جميع الأوامر + MongoDB + استبدال المراقبة التلقائية بزر "جلب الكود الآن")
-// ملاحظة: هذا الملف يجب أن يكون في جذر المشروع على Vercel
+// (تم دمج جميع الأوامر + MongoDB + إضافة كشف أخطاء الاتصال)
 // ====================================================================
 
 const path = require('path');
@@ -271,6 +270,8 @@ module.exports = async (req, res) => {
     try {
         await connectDB();
     } catch (e) {
+        // ✅ إضافة تسجيل الخطأ: هذا هو التعديل الذي سيكشف مشكلة MongoDB في Vercel Logs
+        console.error("CRITICAL DB CONNECTION ERROR:", e.message); 
         res.statusCode = 500;
         return res.end('DB Error');
     }
@@ -403,7 +404,7 @@ module.exports = async (req, res) => {
                 count++;
                 const name = userObj.name || 'N/A';
                 const username = userObj.username || `(ID: ${userObj.id})`;
-                message += `• الكود: \`${key}\`\n  مفعل بواسطة: **${name}** ${username}\n  --------------------------------------\n`;
+                message += `• الكود: \`${key}\`\n  مفعل بواسطة: **${name}** ${username}\n  --------------------------------------\n`;
             }
         }
         if (count === 0) { message = '❌ لا يوجد مستخدمون مفعلون حاليًا.'; } 
@@ -430,7 +431,7 @@ module.exports = async (req, res) => {
             const name = userObj.name || 'N/A';
             const username = userObj.username || `(ID: ${userId})`;
             totalAccounts += count;
-            usageMessage += `• **${name}** ${username}\n  الحسابات المستخرجة: **${count}**\n`;
+            usageMessage += `• **${name}** ${username}\n  الحسابات المستخرجة: **${count}**\n`;
         }
         
         usageMessage = `**الإجمالي المستخرج:** ${totalAccounts} حساب\n\n` + usageMessage;
