@@ -1,8 +1,7 @@
 {
   "functions": {
     "Telegram_API_Bot.js": {
-      "runtime": "nodejs18.x" 
-      // أو "nodejs20.x"
+      "runtime": "nodejs20.x"
     }
   },
   "rewrites": [
