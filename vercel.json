@@ -1,15 +1,14 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "telegramApiBot.js",
-      "use": "@vercel/node"
+  "functions": {
+    "Telegram_API_Bot.js": {
+      "runtime": "nodejs18.x" 
+      // يمكن أن يكون "nodejs20.x" أو "nodejs18.x" حسب اختيارك في إعدادات Vercel
     }
-  ],
-  "routes": [
+  },
+  "rewrites": [
     {
-      "src": "/api",
-      "dest": "telegramApiBot.js"
+      "source": "/(.*)",
+      "destination": "/Telegram_API_Bot.js"
     }
   ]
 }
