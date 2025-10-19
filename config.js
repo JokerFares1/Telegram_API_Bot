@@ -1,20 +1,16 @@
-// config.js
-
 const config = {
-    // ⚠️ إعدادات البوت والـ API (يجب التعديل)
-    BOT_TOKEN: '8298646432:AAEQeDEDzu-XSKVd8cCYSU6VA-ano9jfyOQ', // مفتاح البوت من BotFather
-    CLIENT_KEY: '280eb638f5854bf9bd80b2552876703f321319', // مفتاح العميل الخاص بموقع Hotmail007 API
-    API_HOST: 'https://gapi.hotmail007.com',
-
-    // ⚠️ إعدادات المسؤول (يجب التعديل)
-    ADMIN_ID: 1446074961, // >>>>>> ضع رقم الـ ID الخاص بك هنا <<<<<<
-
-    // إعدادات الانتظار:
+    // /////////////// [ بيانات الاتصال بـ API و البوت ] ///////////////
+    BOT_TOKEN: '8298646432:AAEQeDEDzu-XSKVd8cCYSU6VA-ano9jfyOQ', // توكن البوت
+    CLIENT_KEY: '208a6308e5f8f9db08c2f528767f0312139', // مفتاح العميل الخاص بموقع Hotmail007 API
+    API_HOST: 'https://api.hotmail007.com',
+    
+    // /////////////// [ بيانات المسؤول ] ///////////////
+    ADMIN_ID: 1446874561, // المعرف الخاص بك
     RETRY_DELAY_MS: 10000, 
 
-    // 💾 إعدادات قاعدة البيانات الجديدة (لتخزين دائم)
-    MONGO_URI: 'mongodb+srv://USER:PASS@clustername.xxxxx.mongodb.net/?retryWrites=true&w=majority', // >>>>> ضع رابط الاتصال الذي حصلت عليه هنا <<<<<
-    MONGO_DB_NAME: 'telegramBotDB' // اسم قاعدة البيانات داخل Cluster
+    // /////////////// [ بيانات قاعدة البيانات (الآن أصبحت كاملة) ] ///////////////
+    MONGO_URI: 'mongodb+srv://faresgam14b_db_user:FAres0159357@cluster0.0lbn8fr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+    MONGO_DB_NAME: 'TelegramBotDB', // اسم قاعدة البيانات داخل الـ Cluster
 };
 
 module.exports = config;
