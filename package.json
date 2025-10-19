@@ -1,0 +1,23 @@
+{
+  "name": "telegram-api-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot for Hotmail/Outlook API with MongoDB storage.",
+  "main": "telegramApiBot.js",
+  "scripts": {
+    "start": "node telegramApiBot.js"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "telegraf",
+    "mongodb",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "mongodb": "^4.17.0", 
+    "telegraf": "^4.16.1"
+  }
+}
