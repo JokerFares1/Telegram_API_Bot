@@ -1,7 +1,7 @@
 {
   "functions": {
     "Telegram_API_Bot.js": {
-      "runtime": "nodejs20.x" 
+      "runtime": "nodejs18.x" 
       // أو جرب "nodejs18.x" إذا فشل هذا.
     }
   },
