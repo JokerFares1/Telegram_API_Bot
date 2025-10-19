@@ -1,13 +1,14 @@
 {
   "functions": {
     "Telegram_API_Bot.js": {
-      "runtime": "nodejs20.x"
+      "runtime": "nodejs20.x" 
+      // أو جرب "nodejs18.x" إذا فشل هذا.
     }
-  },  <-- تم حذف الفاصلة هنا
+  },
   "rewrites": [
     {
       "source": "/(.*)",
       "destination": "/Telegram_API_Bot.js"
-    }   <-- تم حذف الفاصلة هنا
+    }
   ]
 }
