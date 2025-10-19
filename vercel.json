@@ -3,11 +3,11 @@
     "Telegram_API_Bot.js": {
       "runtime": "nodejs20.x"
     }
-  },
+  },  <-- تم حذف الفاصلة هنا
   "rewrites": [
     {
       "source": "/(.*)",
       "destination": "/Telegram_API_Bot.js"
-    }
+    }   <-- تم حذف الفاصلة هنا
   ]
 }
